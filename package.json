@@ -10,7 +10,7 @@
     "build": "tsc",
     "lint": "eslint src",
     "format": "prettier --write \"src/**/*.ts\"",
-    "test": "node --test dist/"
+    "test": "node --test dist/parse-tests.test.js"
   },
   "keywords": ["playwright", "git", "commit", "impact", "tests"],
   "license": "MIT",

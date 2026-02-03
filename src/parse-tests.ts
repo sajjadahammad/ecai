@@ -48,8 +48,8 @@ export function parseTestNamesFromSource(source: string): ParsedTest[] {
       });
     }
 
-    // Reset describe when we exit its block
-    if (describeDepth > 0 && depth <= describeDepth) {
+    // Reset describe when we exit its block (depth went below the describe's opening)
+    if (describeDepth > 0 && depth < describeDepth) {
       currentDescribe = null;
       describeDepth = 0;
     }
